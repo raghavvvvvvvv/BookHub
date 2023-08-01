@@ -1,0 +1,258 @@
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e5e5f7;
+  background-image: radial-gradient(circle at center center, #000000, #e5e5f7), repeating-radial-gradient(circle at center center, #000000, #000000, 10px, transparent 20px, transparent 10px);
+  background-blend-mode: multiply;
+  opacity: 0.8;
+  color: #fff;
+}
+
+/* Global styles for header and navigation */
+header {
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav li a:hover {
+  background-color: #555;
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #111;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.book-card {
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  cursor: pointer;
+  perspective: 1000px; /* Set the perspective for 3D transforms */
+  transition: transform 0.4s; /* Add a smooth transition for the flip effect */
+}
+
+.book-card:hover {
+  transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.book-card h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact {
+  font-size: 14px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+/* New styles for the content section */
+.content {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.author {
+  font-size: 14px;
+  color: #888;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Sign In and Sign Up forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #111;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header nav li {
+    margin: 10px 0;
+  }
+
+  .image-container {
+    flex-direction: column;
+  }
+
+  .book-card img {
+    height: 150px;
+  }
+}
+/* Updated styles for anchor tags */
+a {
+  color: #ff9900; /* Change this to the color of your choice */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6600; /* Change this to the color of your choice for hover state */
+}
+
+/* The rest of the existing CSS remains unchanged */
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Rest of the CSS styles... */
