@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Search Book</h1>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Enter a book title or author">
+      <button onclick="searchBooks()">Search</button>
+    </div>
+    <section class="content">
+      <h2>Get the book you want!!</h2>
+      <p>
+        "Books are mirrors: You only see in them what you already have inside you"
+      </p>
+      <p class="author">By Carlos Ruiz Zafón, The Shadow of the Wind</p>
+      <div class="image-container">
+        <img src="image/1.jpeg" alt="Image 1">
+        <img src="image/2.jpeg" alt="Image 2">
+        <img src="image/3.jpeg" alt="Image 3">
+      </div>
+    </section>
+    
+    <div id="searchResults" class="book-grid">
+      <!-- search result -->
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
